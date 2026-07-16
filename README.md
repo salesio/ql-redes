@@ -1,28 +1,35 @@
-﻿# QL REDES â€” Website
+# QL REDES — Website
 
-Website multi-pÃ¡gina moderno para **QL REDES / QL Group** (Maputo, MoÃ§ambique): redes informÃ¡ticas, electricidade, seguranÃ§a electrÃ³nica, portÃµes e pÃ©rgolas.
+## Live site
+
+- **Website:** https://salesio.github.io/ql-redes/
+- **Repository:** https://github.com/salesio/ql-redes
+- **Branch:** main (GitHub Pages source: / root)
+
+
+Website multi-página moderno para **QL REDES / QL Group** (Maputo, Moçambique): redes informáticas, electricidade, segurança electrónica, portões e pérgolas.
 
 ## Estrutura
 
 ```
 ql-redes/
-â”œâ”€â”€ index.html          # InÃ­cio
-â”œâ”€â”€ sobre.html          # Sobre nÃ³s
-â”œâ”€â”€ servicos.html       # ServiÃ§os
-â”œâ”€â”€ portfolio.html      # Galeria de projectos
-â”œâ”€â”€ produtos.html       # CatÃ¡logo + pedido de orÃ§amento (carrinho)
-â”œâ”€â”€ blog.html           # Artigos / SEO
-â”œâ”€â”€ contacto.html       # Contacto + formulÃ¡rio â†’ WhatsApp
-â”œâ”€â”€ faq.html
-â”œâ”€â”€ privacidade.html
-â”œâ”€â”€ assets/
-â”‚   â”œâ”€â”€ css/style.css
-â”‚   â”œâ”€â”€ js/
-â”‚   â”‚   â”œâ”€â”€ main.js       # Header, footer, galeria, formulÃ¡rio
-â”‚   â”‚   â”œâ”€â”€ cart.js       # Carrinho de orÃ§amento + WhatsApp
-â”‚   â”‚   â””â”€â”€ products.js   # CatÃ¡logo
-â”‚   â””â”€â”€ images/           # Fotos do cliente (copiadas)
-â””â”€â”€ README.md
+├── index.html          # Início
+├── sobre.html          # Sobre nós
+├── servicos.html       # Serviços
+├── portfolio.html      # Galeria de projectos
+├── produtos.html       # Catálogo + pedido de orçamento (carrinho)
+├── blog.html           # Artigos / SEO
+├── contacto.html       # Contacto + formulário → WhatsApp
+├── faq.html
+├── privacidade.html
+├── assets/
+│   ├── css/style.css
+│   ├── js/
+│   │   ├── main.js       # Header, footer, galeria, formulário
+│   │   ├── cart.js       # Carrinho de orçamento + WhatsApp
+│   │   └── products.js   # Catálogo
+│   └── images/           # Fotos do cliente (copiadas)
+└── README.md
 ```
 
 ## Como abrir
@@ -39,11 +46,11 @@ Depois visite: http://localhost:8080
 ## Funcionalidades
 
 - Design responsivo (mobile-first), cores ciano / navy
-- WhatsApp flutuante e CTAs em todas as pÃ¡ginas
-- **Produtos**: adicionar ao â€œcarrinhoâ€ â†’ enviar **pedido de orÃ§amento** (nÃ£o Ã© loja com pagamento)
-- PortfÃ³lio com filtros e lightbox
-- FormulÃ¡rio de contacto que abre WhatsApp com a mensagem pronta
-- SEO bÃ¡sico (meta tags em portuguÃªs, keywords Maputo)
+- WhatsApp flutuante e CTAs em todas as páginas
+- **Produtos**: adicionar ao “carrinho” → enviar **pedido de orçamento** (não é loja com pagamento)
+- Portfólio com filtros e lightbox
+- Formulário de contacto que abre WhatsApp com a mensagem pronta
+- SEO básico (meta tags em português, keywords Maputo)
 
 ## Contactos no site
 
@@ -52,20 +59,19 @@ Depois visite: http://localhost:8080
 | WhatsApp / Tel | +258 84 842 6310 |
 | Tel alt. | +258 87 249 7969 |
 | E-mail | qlredes@gmail.com |
-| Morada | Rua IrmÃ£os Rubbi 2250, Maputo |
+| Morada | Rua Irmãos Rubbi 2250, Maputo |
 | Facebook | facebook.com/joaquimlleao |
 | Instagram | @ql_group_ |
 
 ## Personalizar
 
-1. **Produtos** â€” edite `assets/js/products.js`
-2. **Cores** â€” variÃ¡veis em `assets/css/style.css` (`:root`)
-3. **Textos / depoimentos** â€” HTML de cada pÃ¡gina
-4. **Imagens** â€” pasta `assets/images/`
+1. **Produtos** — edite `assets/js/products.js`
+2. **Cores** — variáveis em `assets/css/style.css` (`:root`)
+3. **Textos / depoimentos** — HTML de cada página
+4. **Imagens** — pasta `assets/images/`
 
 ## Deploy
 
-Hospede a pasta completa (HTML/CSS/JS/imagens) em Hostinger, Netlify, Cloudflare Pages, ou qualquer hosting estÃ¡tico. Aponte o domÃ­nio (ex. `qlgroup.co.mz` / `qlredes.co.mz`) para a pasta pÃºblica.
+Hospede a pasta completa (HTML/CSS/JS/imagens) em Hostinger, Netlify, Cloudflare Pages, ou qualquer hosting estático. Aponte o domínio (ex. `qlgroup.co.mz` / `qlredes.co.mz`) para a pasta pública.
 
-NÃ£o requer Node.js nem base de dados.
-
+Não requer Node.js nem base de dados.
