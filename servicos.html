@@ -4,169 +4,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Serviços | Redes, Electricidade, CCTV e Portões — QL REDES Maputo</title>
-  <meta name="description" content="Serviços QL REDES em Maputo: redes informáticas, Wi-Fi, electricidade, CCTV, alarmes, controlo de acesso, portões automáticos e pérgolas. Orçamento sob consulta.">
-  <meta name="keywords" content="redes informáticas Maputo, instalação CCTV Maputo, portões automáticos Maputo, electricidade Maputo">
+  <meta name="description" content="Serviços QL REDES em Maputo: redes informáticas, Wi-Fi, electricidade, CCTV, alarmes, controlo de acesso, portões automáticos e pérgolas.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="assets/images/logo.png">
 </head>
 <body>
-  <header class="site-header" id="site-header"></header>
-
+  <header id="site-header"></header>
   <main>
+
     <section class="page-hero">
+      <div class="parallax-bg" data-parallax="0.2" style="background-image:url('assets/images/download.png')"></div>
+      <div class="parallax-overlay"></div>
       <div class="container">
-        <div class="breadcrumb">
-          <a href="index.html">Início</a> <span>/</span> <span>Serviços</span>
-        </div>
-        <h1>Os nossos serviços</h1>
+        <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Início</a></li><li class="breadcrumb-item active">Serviços</li></ol></nav>
+        <h1 class="display-5 fw-bold">Os nossos serviços</h1>
         <p>Soluções técnicas completas para casas, empresas e espaços comerciais em Maputo. Preços sob consulta.</p>
       </div>
     </section>
-
-    <section class="section">
-      <div class="container">
-        <!-- Redes -->
+    <section class="section"><div class="container">
         <article class="service-detail" id="redes">
-          <div class="text">
-            <span class="section-label">01 · Infraestrutura TI</span>
-            <h2 class="mb-2">Redes Informáticas</h2>
-            <p style="color:var(--text-muted)" class="mb-2">
-              Projectamos e implementamos redes fiáveis para residências e empresas —
-              desde o cabeamento até à configuração de Wi-Fi e servidores.
-            </p>
-            <ul class="checks">
-              <li>Cabeamento estruturado (Cat6 e superiores)</li>
-              <li>Wi-Fi residencial e empresarial de alta cobertura</li>
-              <li>Configuração de routers, switches e pontos de acesso</li>
-              <li>Servidores, partilha de ficheiros e backup básico</li>
-              <li>Manutenção, diagnóstico e optimização de rede</li>
-              <li>Consultoria TI e integração com sistemas de segurança</li>
-            </ul>
-            <p style="font-weight:700;color:var(--primary);margin-bottom:1rem">Preço: sob consulta</p>
-            <a href="https://wa.me/258848426310?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20de%20redes%20inform%C3%A1ticas." class="btn btn-primary" target="_blank" rel="noopener">Pedir orçamento</a>
-          </div>
-          <div class="visual">
-            <img src="assets/images/488415479_17893244067207634_6754080003431670941_n.jpg" alt="Instalação de redes" loading="lazy">
+          <div class="row g-4 g-lg-5 align-items-center">
+            <div class="col-lg-6  reveal">
+              <span class="section-label">01 · Infraestrutura TI</span>
+              <h2 class="section-title">Redes Informáticas</h2>
+              <p class="text-muted">Projectamos e implementamos redes fiáveis para residências e empresas — desde o cabeamento até à configuração de Wi-Fi e servidores.</p>
+              <ul class="check-list"><li><i class="bi bi-check2-circle"></i><span>Cabeamento estruturado (Cat6 e superiores)</span></li><li><i class="bi bi-check2-circle"></i><span>Wi-Fi residencial e empresarial de alta cobertura</span></li><li><i class="bi bi-check2-circle"></i><span>Configuração de routers, switches e pontos de acesso</span></li><li><i class="bi bi-check2-circle"></i><span>Servidores, partilha de ficheiros e backup básico</span></li><li><i class="bi bi-check2-circle"></i><span>Manutenção, diagnóstico e optimização de rede</span></li><li><i class="bi bi-check2-circle"></i><span>Consultoria TI e integração com sistemas de segurança</span></li></ul>
+              <p class="fw-bold text-primary mb-3">Preço: sob consulta</p>
+              <a href="https://wa.me/258848426310?text=Ol%C3%A1%21%20Quero%20or%C3%A7amento%20de%20redes%20inform%C3%A1ticas." class="btn btn-primary" target="_blank" rel="noopener">Pedir orçamento</a>
+            </div>
+            <div class="col-lg-6  reveal reveal-delay-2">
+              <div class="visual-frame"><img src="assets/images/488415479_17893244067207634_6754080003431670941_n.jpg" alt="Redes Informáticas" loading="lazy"></div>
+            </div>
           </div>
         </article>
-
-        <!-- Electricidade -->
-        <article class="service-detail reverse" id="electricidade">
-          <div class="text">
-            <span class="section-label">02 · Energia</span>
-            <h2 class="mb-2">Electricidade</h2>
-            <p style="color:var(--text-muted)" class="mb-2">
-              Instalações eléctricas seguras e bem dimensionadas, alinhadas com as necessidades
-              de iluminação, tomada e automação do seu espaço.
-            </p>
-            <ul class="checks">
-              <li>Instalações eléctricas novas e reabilitações</li>
-              <li>Quadros eléctricos e protecções</li>
-              <li>Iluminação interior e exterior</li>
-              <li>Preparação eléctrica para CCTV, portões e automação</li>
-              <li>Manutenção preventiva e correcção de avarias</li>
-            </ul>
-            <p style="font-weight:700;color:var(--primary);margin-bottom:1rem">Preço: sob consulta</p>
-            <a href="https://wa.me/258848426310?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20de%20electricidade." class="btn btn-primary" target="_blank" rel="noopener">Pedir orçamento</a>
-          </div>
-          <div class="visual">
-            <img src="assets/images/465740896_17874100107207634_5495886275657190308_n.jpg" alt="Serviços de electricidade" loading="lazy">
+        <article class="service-detail" id="electricidade">
+          <div class="row g-4 g-lg-5 align-items-center">
+            <div class="col-lg-6 order-lg-2 reveal">
+              <span class="section-label">02 · Energia</span>
+              <h2 class="section-title">Electricidade</h2>
+              <p class="text-muted">Instalações eléctricas seguras e bem dimensionadas, alinhadas com as necessidades de iluminação, tomadas e automação do seu espaço.</p>
+              <ul class="check-list"><li><i class="bi bi-check2-circle"></i><span>Instalações eléctricas novas e reabilitações</span></li><li><i class="bi bi-check2-circle"></i><span>Quadros eléctricos e protecções</span></li><li><i class="bi bi-check2-circle"></i><span>Iluminação interior e exterior</span></li><li><i class="bi bi-check2-circle"></i><span>Preparação eléctrica para CCTV, portões e automação</span></li><li><i class="bi bi-check2-circle"></i><span>Manutenção preventiva e correcção de avarias</span></li></ul>
+              <p class="fw-bold text-primary mb-3">Preço: sob consulta</p>
+              <a href="https://wa.me/258848426310?text=Ol%C3%A1%21%20Quero%20or%C3%A7amento%20de%20electricidade." class="btn btn-primary" target="_blank" rel="noopener">Pedir orçamento</a>
+            </div>
+            <div class="col-lg-6 order-lg-1 reveal reveal-delay-2">
+              <div class="visual-frame"><img src="assets/images/465740896_17874100107207634_5495886275657190308_n.jpg" alt="Electricidade" loading="lazy"></div>
+            </div>
           </div>
         </article>
-
-        <!-- Segurança -->
         <article class="service-detail" id="seguranca">
-          <div class="text">
-            <span class="section-label">03 · Protecção</span>
-            <h2 class="mb-2">Segurança Electrónica</h2>
-            <p style="color:var(--text-muted)" class="mb-2">
-              Proteja a sua casa ou negócio com videovigilância, alarmes e controlo de acesso —
-              com instalação profissional e orientação no uso.
-            </p>
-            <ul class="checks">
-              <li>CCTV com ou sem fio (incluindo câmaras solares Wi-Fi)</li>
-              <li>Sistemas de alarme residencial e comercial</li>
-              <li>Controlo de acesso (cartão, código, biometria)</li>
-              <li>Fechaduras magnéticas e electrónicas</li>
-              <li>Monitorização remota via aplicação no telemóvel</li>
-              <li>Soluções para condomínios, lojas e escritórios</li>
-            </ul>
-            <p style="font-weight:700;color:var(--primary);margin-bottom:1rem">Ex.: câmara solar Wi-Fi a partir de 8.300 MT · kits sob consulta</p>
-            <div style="display:flex;flex-wrap:wrap;gap:0.75rem">
-              <a href="https://wa.me/258848426310?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20de%20CCTV%20%2F%20seguran%C3%A7a." class="btn btn-primary" target="_blank" rel="noopener">Pedir orçamento</a>
-              <a href="produtos.html" class="btn btn-outline">Ver equipamentos</a>
+          <div class="row g-4 g-lg-5 align-items-center">
+            <div class="col-lg-6  reveal">
+              <span class="section-label">03 · Protecção</span>
+              <h2 class="section-title">Segurança Electrónica</h2>
+              <p class="text-muted">Proteja a sua casa ou negócio com videovigilância, alarmes e controlo de acesso — com instalação profissional e orientação no uso.</p>
+              <ul class="check-list"><li><i class="bi bi-check2-circle"></i><span>CCTV com ou sem fio (incluindo câmaras solares Wi-Fi)</span></li><li><i class="bi bi-check2-circle"></i><span>Sistemas de alarme residencial e comercial</span></li><li><i class="bi bi-check2-circle"></i><span>Controlo de acesso (cartão, código, biometria)</span></li><li><i class="bi bi-check2-circle"></i><span>Fechaduras magnéticas e electrónicas</span></li><li><i class="bi bi-check2-circle"></i><span>Monitorização remota via aplicação no telemóvel</span></li><li><i class="bi bi-check2-circle"></i><span>Soluções para condomínios, lojas e escritórios</span></li></ul>
+              <p class="fw-bold text-primary mb-3">Ex.: câmara solar Wi-Fi a partir de 8.300 MT · kits sob consulta</p>
+              <div class="d-flex flex-wrap gap-2">
+              <a href="https://wa.me/258848426310?text=Ol%C3%A1%21%20Quero%20or%C3%A7amento%20de%20CCTV%20/%20seguran%C3%A7a." class="btn btn-primary" target="_blank" rel="noopener">Pedir orçamento</a>
+              <a href="produtos.html" class="btn btn-outline-primary">Ver equipamentos</a>
+            </div>
+            </div>
+            <div class="col-lg-6  reveal reveal-delay-2">
+              <div class="visual-frame"><img src="assets/images/440984849_836565345161614_2712887158395915178_n.jpg" alt="Segurança Electrónica" loading="lazy"></div>
             </div>
           </div>
-          <div class="visual">
-            <img src="assets/images/440984849_836565345161614_2712887158395915178_n.jpg" alt="CCTV e segurança electrónica" loading="lazy">
-          </div>
         </article>
-
-        <!-- Portões -->
-        <article class="service-detail reverse" id="portoes">
-          <div class="text">
-            <span class="section-label">04 · Acesso &amp; Exterior</span>
-            <h2 class="mb-2">Portões Automáticos, Pérgolas &amp; Metal</h2>
-            <p style="color:var(--text-muted)" class="mb-2">
-              Fabrico, fornecimento e instalação de portões automáticos, motores, pérgolas
-              bioclimáticas, estores e estruturas metálicas sob medida.
-            </p>
-            <ul class="checks">
-              <li>Portões deslizantes e basculantes (design personalizado)</li>
-              <li>Motorização, comandos e sensores de segurança</li>
-              <li>Pérgolas bioclimáticas e cobertura exterior</li>
-              <li>Persianas / estores metálicos</li>
-              <li>Guarda-corpos e trabalhos de metalurgia</li>
-              <li>Entrega e instalação em Maputo</li>
-            </ul>
-            <p style="font-weight:700;color:var(--primary);margin-bottom:1rem">Preço: sob consulta (conforme medidas e design)</p>
-            <div style="display:flex;flex-wrap:wrap;gap:0.75rem">
-              <a href="https://wa.me/258848426310?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20de%20port%C3%A3o%20autom%C3%A1tico%20%2F%20p%C3%A9rgola." class="btn btn-primary" target="_blank" rel="noopener">Pedir orçamento</a>
-              <a href="portfolio.html" class="btn btn-outline">Ver projectos</a>
+        <article class="service-detail" id="portoes">
+          <div class="row g-4 g-lg-5 align-items-center">
+            <div class="col-lg-6 order-lg-2 reveal">
+              <span class="section-label">04 · Acesso & Exterior</span>
+              <h2 class="section-title">Portões Automáticos, Pérgolas & Metal</h2>
+              <p class="text-muted">Fabrico, fornecimento e instalação de portões automáticos, motores, pérgolas bioclimáticas, estores e estruturas metálicas sob medida.</p>
+              <ul class="check-list"><li><i class="bi bi-check2-circle"></i><span>Portões deslizantes e basculantes (design personalizado)</span></li><li><i class="bi bi-check2-circle"></i><span>Motorização, comandos e sensores de segurança</span></li><li><i class="bi bi-check2-circle"></i><span>Pérgolas bioclimáticas e cobertura exterior</span></li><li><i class="bi bi-check2-circle"></i><span>Persianas / estores metálicos</span></li><li><i class="bi bi-check2-circle"></i><span>Guarda-corpos e trabalhos de metalurgia</span></li><li><i class="bi bi-check2-circle"></i><span>Entrega e instalação em Maputo</span></li></ul>
+              <p class="fw-bold text-primary mb-3">Preço: sob consulta (conforme medidas e design)</p>
+              <div class="d-flex flex-wrap gap-2">
+              <a href="https://wa.me/258848426310?text=Ol%C3%A1%21%20Quero%20or%C3%A7amento%20de%20port%C3%A3o%20autom%C3%A1tico%20/%20p%C3%A9rgola." class="btn btn-primary" target="_blank" rel="noopener">Pedir orçamento</a>
+              <a href="portfolio.html" class="btn btn-outline-primary">Ver projectos</a>
+            </div>
+            </div>
+            <div class="col-lg-6 order-lg-1 reveal reveal-delay-2">
+              <div class="visual-frame"><img src="assets/images/download%20(1).png" alt="Portões Automáticos, Pérgolas & Metal" loading="lazy"></div>
             </div>
           </div>
-          <div class="visual">
-            <img src="assets/images/download%20(1).png" alt="Portão automático QL REDES" loading="lazy">
-          </div>
         </article>
-
-        <!-- Outros -->
         <article class="service-detail" id="outros">
-          <div class="text">
-            <span class="section-label">05 · Extra</span>
-            <h2 class="mb-2">Fornecimento &amp; Consultoria</h2>
-            <p style="color:var(--text-muted)" class="mb-2">
-              Além da instalação, fornecemos equipamentos e aconselhamos a melhor solução
-              para o seu orçamento e nível de segurança desejado.
-            </p>
-            <ul class="checks">
-              <li>Fornecimento de equipamentos de rede e segurança</li>
-              <li>Consultoria técnica e dimensionamento de projectos</li>
-              <li>Integrações entre sistemas (rede + CCTV + acesso)</li>
-              <li>Manutenção e suporte após instalação</li>
-            </ul>
-            <a href="produtos.html" class="btn btn-primary">Explorar produtos</a>
+          <div class="row g-4 g-lg-5 align-items-center">
+            <div class="col-lg-6  reveal">
+              <span class="section-label">05 · Extra</span>
+              <h2 class="section-title">Fornecimento & Consultoria</h2>
+              <p class="text-muted">Além da instalação, fornecemos equipamentos e aconselhamos a melhor solução para o seu orçamento e nível de segurança desejado.</p>
+              <ul class="check-list"><li><i class="bi bi-check2-circle"></i><span>Fornecimento de equipamentos de rede e segurança</span></li><li><i class="bi bi-check2-circle"></i><span>Consultoria técnica e dimensionamento de projectos</span></li><li><i class="bi bi-check2-circle"></i><span>Integrações entre sistemas (rede + CCTV + acesso)</span></li><li><i class="bi bi-check2-circle"></i><span>Manutenção e suporte após instalação</span></li></ul>
+              
+              <a href="produtos.html" class="btn btn-primary">Explorar produtos</a>
+            </div>
+            <div class="col-lg-6  reveal reveal-delay-2">
+              <div class="visual-frame"><img src="assets/images/465706527_17874100092207634_6894705478359609218_n.jpg" alt="Fornecimento & Consultoria" loading="lazy"></div>
+            </div>
           </div>
-          <div class="visual">
-            <img src="assets/images/465706527_17874100092207634_6894705478359609218_n.jpg" alt="Fornecimento de equipamentos" loading="lazy">
-          </div>
-        </article>
-      </div>
-    </section>
-
+        </article></div></section>
     <section class="cta-band">
-      <div class="container">
-        <h2>Não sabe por onde começar?</h2>
-        <p>Descreva o seu projecto no WhatsApp — ajudamos a escolher a solução certa.</p>
-        <div class="actions">
-          <a href="https://wa.me/258848426310?text=Ol%C3%A1%20QL%20REDES!%20Preciso%20de%20ajuda%20a%20escolher%20um%20servi%C3%A7o." class="btn btn-white btn-lg" target="_blank" rel="noopener">Falar no WhatsApp</a>
-          <a href="contacto.html" class="btn btn-outline-white btn-lg">Formulário</a>
-        </div>
+      <div class="parallax-overlay"></div>
+      <div class="container reveal">
+        <h2 class="display-6 mb-3">Não sabe por onde começar?</h2>
+        <p class="mb-4">Descreva o seu projecto no WhatsApp — ajudamos a escolher a solução certa.</p>
+        <a href="https://wa.me/258848426310?text=Ol%C3%A1%20QL%20REDES!%20Gostaria%20de%20pedir%20um%20or%C3%A7amento%20gratuito." class="btn btn-light btn-lg me-2" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <a href="contacto.html" class="btn btn-outline-light btn-lg">Formulário</a>
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer" id="site-footer"></footer>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="assets/js/products.js"></script>
   <script src="assets/js/cart.js"></script>
   <script src="assets/js/main.js"></script>

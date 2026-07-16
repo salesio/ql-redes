@@ -1,16 +1,17 @@
-<!DOCTYPE html>
+# -*- coding: utf-8 -*-
+"""Build modern Bootstrap HTML pages for QL REDES (UTF-8)."""
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+HEAD = """<!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QL REDES | Redes, Electricidade e Segurança Electrónica em Maputo</title>
-  <meta name="description" content="QL REDES (QL Group) — soluções integradas em redes informáticas, electricidade, CCTV, portões automáticos e segurança electrónica em Maputo, Moçambique.">
-  <meta name="keywords" content="redes informáticas Maputo, instalação CCTV Maputo, segurança electrónica Moçambique, portões automáticos Maputo">
-  <meta name="author" content="QL REDES">
-  <meta property="og:title" content="QL REDES | Tecnologia & Soluções Integradas">
-  <meta property="og:description" content="Redes, electricidade e segurança electrónica em Maputo. Orçamento gratuito via WhatsApp.">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_MZ">
+  <title>{title}</title>
+  <meta name="description" content="{description}">
+  {extra_meta}
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -19,7 +20,34 @@
 <body>
   <header id="site-header"></header>
   <main>
+"""
 
+FOOT = """
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+"""
+
+WA = "https://wa.me/258848426310?text=Ol%C3%A1%20QL%20REDES!%20Gostaria%20de%20pedir%20um%20or%C3%A7amento%20gratuito."
+
+
+def page(title, description, body, extra_meta=""):
+    return HEAD.format(title=title, description=description, extra_meta=extra_meta) + body + FOOT
+
+
+def write(name, content):
+    path = ROOT / name
+    path.write_text(content, encoding="utf-8", newline="\n")
+    print("wrote", name, "bytes", path.stat().st_size)
+
+
+# ---------- INDEX ----------
+index_body = f"""
     <section class="hero-parallax">
       <div class="parallax-bg" data-parallax="0.35" style="background-image:url('assets/images/download%20(1).png')"></div>
       <div class="parallax-overlay"></div>
@@ -33,7 +61,7 @@
               para casas e empresas em Maputo — com atendimento rápido e orçamento sem compromisso.
             </p>
             <div class="d-flex flex-wrap gap-2 mb-2">
-              <a href="https://wa.me/258848426310?text=Ol%C3%A1%20QL%20REDES!%20Gostaria%20de%20pedir%20um%20or%C3%A7amento%20gratuito." class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-1"></i> Pedir Orçamento Gratuito</a>
+              <a href="{WA}" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-1"></i> Pedir Orçamento Gratuito</a>
               <a href="servicos.html" class="btn btn-outline-light btn-lg">Ver Serviços</a>
               <a href="produtos.html" class="btn btn-light btn-lg">Ver Produtos</a>
             </div>
@@ -134,7 +162,7 @@
         <h2 class="display-6 fw-bold mb-3">Mais de uma década a proteger e conectar Maputo</h2>
         <p class="mb-4 mx-auto" style="max-width:32rem;opacity:.9">Redes, electricidade e segurança electrónica — num só parceiro de confiança.</p>
         <a href="portfolio.html" class="btn btn-light btn-lg me-2">Ver portfólio</a>
-        <a href="https://wa.me/258848426310?text=Ol%C3%A1%20QL%20REDES!%20Gostaria%20de%20pedir%20um%20or%C3%A7amento%20gratuito." class="btn btn-outline-light btn-lg" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <a href="{WA}" class="btn btn-outline-light btn-lg" target="_blank" rel="noopener">Falar no WhatsApp</a>
       </div>
     </section>
 
@@ -146,43 +174,20 @@
           <p class="text-muted">Trabalhos reais da equipa — portões, estruturas, segurança e mais.</p>
         </div>
         <div class="row g-3">
-          
-          <div class="col-6 col-md-4 reveal reveal-delay-1">
+          {"".join(f'''
+          <div class="col-6 col-md-4 reveal reveal-delay-{(i%4)+1}">
             <div class="gallery-item">
-              <img src="assets/images/download%20(1).png" alt="Portão automático" loading="lazy">
-              <div class="gallery-overlay"><span>Portão automático</span></div>
+              <img src="{src}" alt="{alt}" loading="lazy">
+              <div class="gallery-overlay"><span>{alt}</span></div>
             </div>
-          </div>
-          <div class="col-6 col-md-4 reveal reveal-delay-2">
-            <div class="gallery-item">
-              <img src="assets/images/489694084_1071761274975352_932475664368770287_n.jpg" alt="Portão design" loading="lazy">
-              <div class="gallery-overlay"><span>Portão design</span></div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 reveal reveal-delay-3">
-            <div class="gallery-item">
-              <img src="assets/images/488411407_17893244058207634_6765023642434450324_n.jpg" alt="Estrutura metálica" loading="lazy">
-              <div class="gallery-overlay"><span>Estrutura metálica</span></div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 reveal reveal-delay-4">
-            <div class="gallery-item">
-              <img src="assets/images/465706527_17874100092207634_6894705478359609218_n.jpg" alt="Preparação de instalação" loading="lazy">
-              <div class="gallery-overlay"><span>Preparação de instalação</span></div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 reveal reveal-delay-1">
-            <div class="gallery-item">
-              <img src="assets/images/675813361_1370522625099214_4137454648823396842_n.jpg" alt="Pérgola bioclimática" loading="lazy">
-              <div class="gallery-overlay"><span>Pérgola bioclimática</span></div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 reveal reveal-delay-2">
-            <div class="gallery-item">
-              <img src="assets/images/download.png" alt="Portão painel fechado" loading="lazy">
-              <div class="gallery-overlay"><span>Portão painel fechado</span></div>
-            </div>
-          </div>
+          </div>''' for i,(src,alt) in enumerate([
+            ("assets/images/download%20(1).png","Portão automático"),
+            ("assets/images/489694084_1071761274975352_932475664368770287_n.jpg","Portão design"),
+            ("assets/images/488411407_17893244058207634_6765023642434450324_n.jpg","Estrutura metálica"),
+            ("assets/images/465706527_17874100092207634_6894705478359609218_n.jpg","Preparação de instalação"),
+            ("assets/images/675813361_1370522625099214_4137454648823396842_n.jpg","Pérgola bioclimática"),
+            ("assets/images/download.png","Portão painel fechado"),
+          ]))}
         </div>
         <div class="text-center mt-4 reveal"><a href="portfolio.html" class="btn btn-outline-primary btn-lg">Ver portfólio completo</a></div>
       </div>
@@ -227,19 +232,15 @@
           <h2 class="section-title">Como pedir o seu orçamento</h2>
         </div>
         <div class="row g-4">
-          
-          <div class="col-6 col-lg-3 reveal reveal-delay-1">
-            <div class="step-card"><div class="step-num">1</div><h4 class="h6 text-navy">Contacte-nos</h4><p class="small text-muted mb-0">WhatsApp, telefone ou formulário no site.</p></div>
-          </div>
-          <div class="col-6 col-lg-3 reveal reveal-delay-2">
-            <div class="step-card"><div class="step-num">2</div><h4 class="h6 text-navy">Avaliação</h4><p class="small text-muted mb-0">Visitamos o local e analisamos a melhor solução.</p></div>
-          </div>
-          <div class="col-6 col-lg-3 reveal reveal-delay-3">
-            <div class="step-card"><div class="step-num">3</div><h4 class="h6 text-navy">Orçamento</h4><p class="small text-muted mb-0">Proposta clara com equipamentos e prazos.</p></div>
-          </div>
-          <div class="col-6 col-lg-3 reveal reveal-delay-4">
-            <div class="step-card"><div class="step-num">4</div><h4 class="h6 text-navy">Instalação</h4><p class="small text-muted mb-0">Execução profissional e suporte após entrega.</p></div>
-          </div>
+          {"".join(f'''
+          <div class="col-6 col-lg-3 reveal reveal-delay-{i}">
+            <div class="step-card"><div class="step-num">{i}</div><h4 class="h6 text-navy">{t}</h4><p class="small text-muted mb-0">{d}</p></div>
+          </div>''' for i,t,d in [
+            (1,"Contacte-nos","WhatsApp, telefone ou formulário no site."),
+            (2,"Avaliação","Visitamos o local e analisamos a melhor solução."),
+            (3,"Orçamento","Proposta clara com equipamentos e prazos."),
+            (4,"Instalação","Execução profissional e suporte após entrega."),
+          ])}
         </div>
       </div>
     </section>
@@ -251,18 +252,102 @@
         <h2 class="display-6 mb-3">Pronto para proteger e modernizar o seu espaço?</h2>
         <p class="mb-4">Peça um orçamento gratuito hoje. Respondemos rapidamente via WhatsApp.</p>
         <div class="d-flex flex-wrap justify-content-center gap-2">
-          <a href="https://wa.me/258848426310?text=Ol%C3%A1%20QL%20REDES!%20Gostaria%20de%20pedir%20um%20or%C3%A7amento%20gratuito." class="btn btn-light btn-lg" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-1"></i> +258 84 842 6310</a>
+          <a href="{WA}" class="btn btn-light btn-lg" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-1"></i> +258 84 842 6310</a>
           <a href="contacto.html" class="btn btn-outline-light btn-lg">Formulário de contacto</a>
           <a href="produtos.html" class="btn btn-outline-light btn-lg">Montar lista de produtos</a>
         </div>
       </div>
     </section>
+"""
 
-  </main>
-  <footer id="site-footer"></footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="assets/js/products.js"></script>
-  <script src="assets/js/cart.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+write(
+    "index.html",
+    page(
+        "QL REDES | Redes, Electricidade e Segurança Electrónica em Maputo",
+        "QL REDES (QL Group) — soluções integradas em redes informáticas, electricidade, CCTV, portões automáticos e segurança electrónica em Maputo, Moçambique.",
+        index_body,
+        extra_meta="""<meta name="keywords" content="redes informáticas Maputo, instalação CCTV Maputo, segurança electrónica Moçambique, portões automáticos Maputo">
+  <meta name="author" content="QL REDES">
+  <meta property="og:title" content="QL REDES | Tecnologia & Soluções Integradas">
+  <meta property="og:description" content="Redes, electricidade e segurança electrónica em Maputo. Orçamento gratuito via WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_MZ">""",
+    ),
+)
+
+# ---------- SOBRE ----------
+write(
+    "sobre.html",
+    page(
+        "Sobre Nós | QL REDES — QL Group Maputo",
+        "Conheça a QL REDES (QL Group): empresa moçambicana em Maputo com 10+ anos em redes, electricidade e segurança electrónica.",
+        f"""
+    <section class="page-hero">
+      <div class="parallax-bg" data-parallax="0.2" style="background-image:url('assets/images/488411407_17893244058207634_6765023642434450324_n.jpg')"></div>
+      <div class="parallax-overlay"></div>
+      <div class="container">
+        <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Início</a></li><li class="breadcrumb-item active">Sobre Nós</li></ol></nav>
+        <h1 class="display-5 fw-bold">Sobre a QL REDES</h1>
+        <p>Tecnologia, redes e segurança — uma empresa moçambicana ao serviço de casas e negócios em Maputo.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 reveal">
+            <div class="visual-frame"><img src="assets/images/488411407_17893244058207634_6765023642434450324_n.jpg" alt="Equipa QL REDES em obra" loading="lazy"></div>
+          </div>
+          <div class="col-lg-6 reveal reveal-delay-2">
+            <span class="section-label">A nossa história</span>
+            <h2 class="section-title">QL REDES / QL Group</h2>
+            <p class="text-muted">A <strong>QL REDES</strong> (também conhecida como <strong>QL Group</strong>) é uma empresa moçambicana sediada em Maputo, especializada em <strong>Tecnologia</strong>, <strong>Redes Informáticas</strong>, <strong>Electricidade</strong> e <strong>Segurança Electrónica</strong>.</p>
+            <p class="text-muted">Com mais de <strong>10 anos de experiência</strong> no terreno, unimos competências técnicas para entregar soluções integradas — da infraestrutura de rede à videovigilância, passando por instalações eléctricas, portões automáticos e pérgolas.</p>
+            <p class="text-muted mb-0">Actuamos nos segmentos <strong>B2C</strong> e <strong>B2B</strong>, com ênfase em soluções práticas e fiáveis para Maputo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 order-lg-2 reveal">
+            <div class="visual-frame"><img src="assets/images/595662529_1269319441886200_6300626288040576835_n.jpg" alt="Operações QL REDES" loading="lazy"></div>
+          </div>
+          <div class="col-lg-6 order-lg-1 reveal reveal-delay-2">
+            <span class="section-label">Liderança</span>
+            <h2 class="section-title">Joaquim Leão</h2>
+            <p class="text-muted"><strong>Proprietário e Director Geral</strong> — engenheiro informático e técnico de redes. Lidera a visão da empresa: oferecer tecnologia e segurança com profissionalismo e proximidade ao cliente.</p>
+            <p class="text-muted mb-4">Acompanhe o dia-a-dia dos projectos no Facebook e Instagram (@ql_group_).</p>
+            <a href="contacto.html" class="btn btn-primary">Falar connosco</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-5 reveal"><span class="section-label">Missão &amp; Valores</span><h2 class="section-title">O que nos move</h2></div>
+        <div class="row g-4">
+          <div class="col-md-4 reveal reveal-delay-1"><div class="card ql-card h-100 text-center"><div class="card-body p-4"><div class="card-icon mx-auto"><i class="bi bi-bullseye"></i></div><h3 class="h5">Missão</h3><p class="text-muted small mb-0">Fornecer soluções tecnológicas e de segurança confiáveis, acessíveis e bem executadas em Moçambique.</p></div></div></div>
+          <div class="col-md-4 reveal reveal-delay-2"><div class="card ql-card h-100 text-center"><div class="card-body p-4"><div class="card-icon mx-auto"><i class="bi bi-eye"></i></div><h3 class="h5">Visão</h3><p class="text-muted small mb-0">Ser referência em Maputo em soluções integradas de redes, electricidade e segurança electrónica.</p></div></div></div>
+          <div class="col-md-4 reveal reveal-delay-3"><div class="card ql-card h-100 text-center"><div class="card-body p-4"><div class="card-icon mx-auto"><i class="bi bi-gem"></i></div><h3 class="h5">Valores</h3><p class="text-muted small mb-0">Profissionalismo, inovação prática, atendimento personalizado e transparência nos orçamentos.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="parallax-overlay"></div>
+      <div class="container reveal">
+        <h2 class="display-6 mb-3">Vamos trabalhar juntos?</h2>
+        <p class="mb-4">Conte-nos o seu projecto. Orçamento gratuito e sem compromisso.</p>
+        <a href="{WA}" class="btn btn-light btn-lg me-2" target="_blank" rel="noopener">Contactar no WhatsApp</a>
+        <a href="servicos.html" class="btn btn-outline-light btn-lg">Ver serviços</a>
+      </div>
+    </section>
+""",
+    ),
+)
+
+print("index + sobre done")

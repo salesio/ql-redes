@@ -4,106 +4,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ | Perguntas Frequentes — QL REDES Maputo</title>
-  <meta name="description" content="Perguntas frequentes sobre orçamentos, CCTV, portões automáticos, redes e instalação da QL REDES em Maputo.">
+  <meta name="description" content="Perguntas frequentes sobre orçamentos, CCTV, portões automáticos, redes e instalação da QL REDES.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="assets/images/logo.png">
 </head>
 <body>
-  <header class="site-header" id="site-header"></header>
-
+  <header id="site-header"></header>
   <main>
+
     <section class="page-hero">
+      <div class="parallax-overlay"></div>
       <div class="container">
-        <div class="breadcrumb">
-          <a href="index.html">Início</a> <span>/</span> <span>FAQ</span>
-        </div>
-        <h1>Perguntas frequentes</h1>
+        <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Início</a></li><li class="breadcrumb-item active">FAQ</li></ol></nav>
+        <h1 class="display-5 fw-bold">Perguntas frequentes</h1>
         <p>Respostas rápidas sobre orçamentos, instalação e serviços da QL REDES.</p>
       </div>
     </section>
-
     <section class="section">
-      <div class="container">
-        <div class="faq-list">
-          <details class="faq-item" open>
-            <summary>O site vende produtos com pagamento online?</summary>
-            <div class="answer">
-              Não. A página de produtos serve para <strong>mostrar equipamentos</strong> e montar uma lista de interesse.
-              Depois envia um <strong>pedido de orçamento</strong> (WhatsApp). A QL REDES confirma preços, stock e instalação.
+      <div class="container" style="max-width:760px">
+        <div class="accordion reveal" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq0">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c0" aria-expanded="true" aria-controls="c0">O site vende produtos com pagamento online?</button>
+              </h2>
+              <div id="c0" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" aria-labelledby="faq0">
+                <div class="accordion-body text-muted">Não. A página de produtos serve para <strong>mostrar equipamentos</strong> e montar uma lista de interesse. Depois envia um <strong>pedido de orçamento</strong> (WhatsApp).</div>
+              </div>
             </div>
-          </details>
-          <details class="faq-item">
-            <summary>Os preços no catálogo são finais?</summary>
-            <div class="answer">
-              Os valores indicados (quando existem) são <strong>preços de referência</strong> e podem variar consoante
-              o modelo, quantidade, disponibilidade e complexidade da instalação. O orçamento formal é sempre confirmado pela equipa.
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c1" aria-expanded="false" aria-controls="c1">Os preços no catálogo são finais?</button>
+              </h2>
+              <div id="c1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq1">
+                <div class="accordion-body text-muted">Os valores indicados (quando existem) são <strong>preços de referência</strong> e podem variar consoante o modelo, quantidade e complexidade da instalação.</div>
+              </div>
             </div>
-          </details>
-          <details class="faq-item">
-            <summary>Em que zonas trabalham?</summary>
-            <div class="answer">
-              Estamos sediados em <strong>Maputo</strong> (Rua Irmãos Rubbi 2250) e atendemos residências e empresas
-              no Grande Maputo. Para outras localidades, contacte-nos para avaliar deslocação.
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2" aria-expanded="false" aria-controls="c2">Em que zonas trabalham?</button>
+              </h2>
+              <div id="c2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq2">
+                <div class="accordion-body text-muted">Estamos sediados em <strong>Maputo</strong> (Rua Irmãos Rubbi 2250) e atendemos o Grande Maputo. Para outras localidades, contacte-nos.</div>
+              </div>
             </div>
-          </details>
-          <details class="faq-item">
-            <summary>Quanto tempo demora um orçamento?</summary>
-            <div class="answer">
-              Pedidos simples via WhatsApp costumam ter resposta rápida em horário de atendimento.
-              Projectos com visita técnica (portões sob medida, redes empresariais, CCTV grande escala)
-              podem precisar de avaliação no local antes da proposta final.
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3" aria-expanded="false" aria-controls="c3">Quanto tempo demora um orçamento?</button>
+              </h2>
+              <div id="c3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq3">
+                <div class="accordion-body text-muted">Pedidos simples via WhatsApp têm resposta rápida. Projectos com visita técnica podem precisar de avaliação no local.</div>
+              </div>
             </div>
-          </details>
-          <details class="faq-item">
-            <summary>Instalam e só fornecem equipamento?</summary>
-            <div class="answer">
-              Fazemos <strong>fornecimento e instalação</strong>. Em muitos casos a instalação profissional
-              é essencial para o bom funcionamento (CCTV, portões, redes, electricidade).
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c4" aria-expanded="false" aria-controls="c4">Instalam e só fornecem equipamento?</button>
+              </h2>
+              <div id="c4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq4">
+                <div class="accordion-body text-muted">Fazemos <strong>fornecimento e instalação</strong>. Em muitos casos a instalação profissional é essencial.</div>
+              </div>
             </div>
-          </details>
-          <details class="faq-item">
-            <summary>Que informação devo enviar para orçamento de portão?</summary>
-            <div class="answer">
-              Idealmente: <strong>fotos do vão e do local</strong>, medidas aproximadas (largura/altura),
-              se já existe portão ou se é novo, e se pretende motorização. Isso acelera muito a proposta.
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c5" aria-expanded="false" aria-controls="c5">Que informação enviar para orçamento de portão?</button>
+              </h2>
+              <div id="c5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq5">
+                <div class="accordion-body text-muted">Idealmente: <strong>fotos do vão</strong>, medidas aproximadas e se pretende motorização.</div>
+              </div>
             </div>
-          </details>
-          <details class="faq-item">
-            <summary>As câmaras CCTV funcionam sem internet?</summary>
-            <div class="answer">
-              Sistemas com gravador local podem gravar sem internet. A visualização remota no telemóvel
-              normalmente precisa de ligação. Existem também câmaras Wi-Fi/solares com app — avaliamos a melhor opção consigo.
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c6" aria-expanded="false" aria-controls="c6">As câmaras CCTV funcionam sem internet?</button>
+              </h2>
+              <div id="c6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq6">
+                <div class="accordion-body text-muted">Sistemas com gravador local podem gravar sem internet. A visualização remota normalmente precisa de ligação.</div>
+              </div>
             </div>
-          </details>
-          <details class="faq-item">
-            <summary>Oferecem garantia?</summary>
-            <div class="answer">
-              Sim — a garantia depende do equipamento e do tipo de serviço. Detalhamos condições no orçamento
-              e após a instalação. Em caso de dúvida, pergunte no WhatsApp antes de avançar.
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq7">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c7" aria-expanded="false" aria-controls="c7">Oferecem garantia?</button>
+              </h2>
+              <div id="c7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq7">
+                <div class="accordion-body text-muted">Sim — a garantia depende do equipamento e do serviço. Detalhamos condições no orçamento.</div>
+              </div>
             </div>
-          </details>
-          <details class="faq-item">
-            <summary>Como posso acompanhar projectos da empresa?</summary>
-            <div class="answer">
-              Siga a QL REDES no
-              <a href="https://www.facebook.com/joaquimlleao" target="_blank" rel="noopener">Facebook</a>
-              e no
-              <a href="https://www.instagram.com/ql_group_/" target="_blank" rel="noopener">Instagram (@ql_group_)</a>,
-              onde partilhamos trabalhos de campo e instalações.
-            </div>
-          </details>
-        </div>
-
-        <div class="text-center mt-3">
-          <p style="color:var(--text-muted);margin-bottom:1rem">Não encontrou a resposta?</p>
-          <a href="https://wa.me/258848426310?text=Ol%C3%A1%20QL%20REDES!%20Tenho%20uma%20pergunta." class="btn btn-whatsapp" target="_blank" rel="noopener">Perguntar no WhatsApp</a>
-          <a href="contacto.html" class="btn btn-outline" style="margin-left:0.5rem">Página de contacto</a>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq8">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c8" aria-expanded="false" aria-controls="c8">Como acompanhar projectos da empresa?</button>
+              </h2>
+              <div id="c8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq8">
+                <div class="accordion-body text-muted">Siga no <a href="https://www.facebook.com/joaquimlleao" target="_blank" rel="noopener">Facebook</a> e no <a href="https://www.instagram.com/ql_group_/" target="_blank" rel="noopener">Instagram (@ql_group_)</a>.</div>
+              </div>
+            </div></div>
+        <div class="text-center mt-5 reveal">
+          <p class="text-muted mb-3">Não encontrou a resposta?</p>
+          <a href="https://wa.me/258848426310?text=Ol%C3%A1%20QL%20REDES!%20Gostaria%20de%20pedir%20um%20or%C3%A7amento%20gratuito." class="btn btn-whatsapp me-2" target="_blank" rel="noopener">Perguntar no WhatsApp</a>
+          <a href="contacto.html" class="btn btn-outline-primary">Página de contacto</a>
         </div>
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer" id="site-footer"></footer>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="assets/js/products.js"></script>
   <script src="assets/js/cart.js"></script>
   <script src="assets/js/main.js"></script>

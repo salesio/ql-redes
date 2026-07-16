@@ -76,7 +76,7 @@ const Cart = {
     if (!el) {
       el = document.createElement("div");
       el.id = "toast";
-      el.className = "toast";
+      el.className = "toast-ql";
       document.body.appendChild(el);
     }
     el.textContent = msg;
