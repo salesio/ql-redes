@@ -14,17 +14,9 @@ function waLink(text) {
   return `https://wa.me/${SITE.whatsapp}${t}`;
 }
 
-function logoSVG() {
-  return `<svg class="logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect width="48" height="48" rx="12" fill="#0B1F3A"/>
-    <circle cx="24" cy="24" r="8" stroke="#0B9ED9" stroke-width="2.5"/>
-    <circle cx="24" cy="24" r="3" fill="#0B9ED9"/>
-    <circle cx="12" cy="14" r="2.5" fill="#0B9ED9"/>
-    <circle cx="36" cy="14" r="2.5" fill="#0B9ED9"/>
-    <circle cx="12" cy="34" r="2.5" fill="#0B9ED9"/>
-    <circle cx="36" cy="34" r="2.5" fill="#0B9ED9"/>
-    <path d="M14 15.5L19 20M34 15.5L29 20M14 32.5L19 28M34 32.5L29 28" stroke="#0B9ED9" stroke-width="1.5" stroke-linecap="round"/>
-  </svg>`;
+function logoImg(extraClass = "") {
+  const cls = extraClass ? `logo-img ${extraClass}` : "logo-img";
+  return `<img src="assets/images/logo.png" alt="QL REDES — Tecnologias &amp; Soluções Informáticas" class="${cls}" width="220" height="56" decoding="async">`;
 }
 
 function currentPage() {
@@ -46,11 +38,7 @@ function injectHeader() {
   header.innerHTML = `
     <div class="container header-inner">
       <a href="index.html" class="logo" aria-label="QL REDES — início">
-        ${logoSVG()}
-        <span class="logo-text">
-          <strong>QL<span>REDES</span></strong>
-          <small>Tecnologia &amp; Soluções</small>
-        </span>
+        ${logoImg()}
       </a>
       <nav class="nav-desktop" aria-label="Principal">
         ${navLink("index.html", "Início", c)}
@@ -109,12 +97,8 @@ function injectFooter() {
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">
-            ${logoSVG()}
-            <span class="logo-text">
-              <strong>QL<span style="color:var(--primary)">REDES</span></strong>
-              <small>Tecnologia &amp; Soluções</small>
-            </span>
+          <a href="index.html" class="logo logo-footer">
+            ${logoImg("logo-img-footer")}
           </a>
           <p>Empresa moçambicana em Maputo especializada em redes informáticas, electricidade e segurança electrónica.</p>
           <div class="footer-social">
